@@ -1,0 +1,31 @@
+# AudioAnalysisObjectTrack
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**numSamples** | **Integer** | The exact number of audio samples analyzed from this track. See also &#x60;analysis_sample_rate&#x60;. |  [optional]
+**duration** | [**BigDecimal**](BigDecimal.md) | Length of the track in seconds. |  [optional]
+**sampleMd5** | **String** | This field will always contain the empty string. |  [optional]
+**offsetSeconds** | **Integer** | An offset to the start of the region of the track that was analyzed. (As the entire track is analyzed, this should always be 0.) |  [optional]
+**windowSeconds** | **Integer** | The length of the region of the track was analyzed, if a subset of the track was analyzed. (As the entire track is analyzed, this should always be 0.) |  [optional]
+**analysisSampleRate** | **Integer** | The sample rate used to decode and analyze this track. May differ from the actual sample rate of this track available on Spotify. |  [optional]
+**analysisChannels** | **Integer** | The number of channels used for analysis. If 1, all channels are summed together to mono before analysis. |  [optional]
+**endOfFadeIn** | [**BigDecimal**](BigDecimal.md) | The time, in seconds, at which the track&#x27;s fade-in period ends. If the track has no fade-in, this will be 0.0. |  [optional]
+**startOfFadeOut** | [**BigDecimal**](BigDecimal.md) | The time, in seconds, at which the track&#x27;s fade-out period starts. If the track has no fade-out, this should match the track&#x27;s length. |  [optional]
+**loudness** | **Float** |  |  [optional]
+**tempo** | **Float** |  |  [optional]
+**tempoConfidence** | [**BigDecimal**](BigDecimal.md) | The confidence, from 0.0 to 1.0, of the reliability of the &#x60;tempo&#x60;. |  [optional]
+**timeSignature** | **Integer** |  |  [optional]
+**timeSignatureConfidence** | [**BigDecimal**](BigDecimal.md) | The confidence, from 0.0 to 1.0, of the reliability of the &#x60;time_signature&#x60;. |  [optional]
+**key** | **Integer** |  |  [optional]
+**keyConfidence** | [**BigDecimal**](BigDecimal.md) | The confidence, from 0.0 to 1.0, of the reliability of the &#x60;key&#x60;. |  [optional]
+**mode** | **Integer** |  |  [optional]
+**modeConfidence** | [**BigDecimal**](BigDecimal.md) | The confidence, from 0.0 to 1.0, of the reliability of the &#x60;mode&#x60;. |  [optional]
+**codestring** | **String** | An [Echo Nest Musical Fingerprint (ENMFP)](https://academiccommons.columbia.edu/doi/10.7916/D8Q248M4) codestring for this track. |  [optional]
+**codeVersion** | [**BigDecimal**](BigDecimal.md) | A version number for the Echo Nest Musical Fingerprint format used in the codestring field. |  [optional]
+**echoprintstring** | **String** | An [EchoPrint](https://github.com/spotify/echoprint-codegen) codestring for this track. |  [optional]
+**echoprintVersion** | [**BigDecimal**](BigDecimal.md) | A version number for the EchoPrint format used in the echoprintstring field. |  [optional]
+**synchstring** | **String** | A [Synchstring](https://github.com/echonest/synchdata) for this track. |  [optional]
+**synchVersion** | [**BigDecimal**](BigDecimal.md) | A version number for the Synchstring used in the synchstring field. |  [optional]
+**rhythmstring** | **String** | A Rhythmstring for this track. The format of this string is similar to the Synchstring. |  [optional]
+**rhythmVersion** | [**BigDecimal**](BigDecimal.md) | A version number for the Rhythmstring used in the rhythmstring field. |  [optional]
